@@ -13,7 +13,7 @@ public class LastNumber {
 		}
 	}
 
-	static boolean isDouble(double x) { 
+	private static boolean isDouble(double x) { 
 		return x % 1 != 0;
 	}
 
