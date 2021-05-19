@@ -8,8 +8,8 @@ public class LastNumber {
 
 		double x;
 		while (true) {
-			x = Instruments.inputDouble("������� �����: ");
-			System.out.println("��������� ����� ��������: " + getlastNumberSquare(x));
+			x = Instruments.inputDouble("��������������������� ���������������: ");
+			System.out.println("��������������������������� ��������������� ������������������������: " + getlastNumberSquare(x));
 		}
 	}
 
