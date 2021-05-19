@@ -5,15 +5,18 @@ import homework01.instruments.*;
 public class PerfectNumber {
 
 	public static void main(String[] args) {
+		
+		int num;
+		int[] div;
 		while (true) {
-			int num = (int) Instruments.input("Введите число: ");
-			int[] d = findDivisors(num);
-			System.out.println("Число " + num + " совершенное: " + isPerfect(num, d));
+			num = Instruments.inputInt("Введите число: ");
+			div = findDivisors(num);
+			System.out.println("Число " + num + " совершенное: " + isPerfect(num, div));
 		}
 
 	}
 
-	static int[] findDivisors(int x) {
+	private static int[] findDivisors(int x) {
 		int count = 1;
 		int position = 0;
 
@@ -35,7 +38,7 @@ public class PerfectNumber {
 
 	}
 
-	static boolean isPerfect(int x, int[] divisors) {
+	private static boolean isPerfect(int x, int[] divisors) {
 		int sum = 0;
 
 		for (int d : divisors) {

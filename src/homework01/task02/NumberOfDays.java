@@ -8,18 +8,20 @@ public class NumberOfDays {
 		int month, year, days;
 
 		while (true) {
-			month = (int) Instruments.input("¬ведите мес€ц: ");
-			year = (int) Instruments.input("¬ведите год: ");
+			month = Instruments.inputInt("¬ведите мес€ц: ");
+			checkMonth(month);
+			year = Instruments.inputInt("¬ведите год: ");
+			Instruments.checkNegative(year);
 			days = countDays(month, year);
 			System.out.println(" оличество дней в " + month + " мес€це " + year + " года: " + days);
 		}
 	}
 
-	static boolean isLeap(int year) {
+	private static boolean isLeap(int year) {
 		return year % 4 == 0 && (year % 100 != 0 || year % 400 == 0);
 	}
 
-	static int countDays(int month, int year) {
+	private static int countDays(int month, int year) {
 		int days = 0;
 		int[] month31 = { 1, 3, 5, 7, 8, 10, 12 };
 		int[] month30 = { 4, 6, 9, 11 };
@@ -43,6 +45,12 @@ public class NumberOfDays {
 			}
 		}
 		return days;
+	}
+
+	private static void checkMonth(int m) throws ArithmeticException {
+		if (m <= 0 || m > 12) {
+			throw new ArithmeticException("ћес€ц введЄн неверно");
+		}
 	}
 
 }

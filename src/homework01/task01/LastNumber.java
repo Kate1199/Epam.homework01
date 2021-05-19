@@ -5,17 +5,19 @@ import homework01.instruments.*;
 public class LastNumber {
 
 	public static void main(String[] args) {
+
+		double x;
 		while (true) {
-			double x = Instruments.input("Введите число: ");
+			x = Instruments.inputDouble("Введите число: ");
 			System.out.println("Последняя цифра квадрата: " + getlastNumberSquare(x));
 		}
 	}
 
-	static boolean isDouble(double x) {
+	private static boolean isDouble(double x) {
 		return x % 1 != 0;
 	}
 
-	static double getlastNumberSquare(double x) {
+	private static double getlastNumberSquare(double x) {
 		while (isDouble(x)) {
 			x = x * 10;
 		}

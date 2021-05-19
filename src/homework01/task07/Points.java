@@ -5,14 +5,21 @@ import homework01.instruments.*;
 public class Points {
 
 	public static void main(String[] args) {
-		while (true) {
-			double x1 = Instruments.input("¬ведите х1: ");
-			double y1 = Instruments.input("¬ведите y1: ");
-			double x2 = Instruments.input("¬ведите х2: ");
-			double y2 = Instruments.input("¬ведите y2: ");
 
-			double A = getHypotenuse(x1, y1);
-			double B = getHypotenuse(x2, y2);
+		double[] coor = new double[4];
+
+		while (true) {
+			coor[0] = Instruments.inputDouble("¬ведите х1: ");
+			coor[1] = Instruments.inputDouble("¬ведите y1: ");
+			coor[2] = Instruments.inputDouble("¬ведите х2: ");
+			coor[3] = Instruments.inputDouble("¬ведите y2: ");
+			
+			for(double c : coor) {
+				Instruments.checkNegative(c);
+			}
+
+			double A = getHypotenuse(coor[0], coor[1]);
+			double B = getHypotenuse(coor[2], coor[3]);
 
 			System.out.println(comparePoints(A, B));
 		}

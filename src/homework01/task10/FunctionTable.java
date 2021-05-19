@@ -6,12 +6,16 @@ import homework01.instruments.*;
 public class FunctionTable {
 
 	public static void main(String[] args) {
-
+		
+		int a;
+		int b;
+		double h;
+		
 		while (true) {
 
-			int a = (int) Instruments.input("¬ведите а: ");
-			int b = (int) Instruments.input("¬ведите b: ");
-			double h = Instruments.input("¬ведите h: ");
+			a = (int) Instruments.inputDouble("¬ведите а: ");
+			b = (int) Instruments.inputDouble("¬ведите b: ");
+			h = Instruments.inputDouble("¬ведите h: ");
 
 			ArrayList<Double> x = getArgs(a, b, h);
 			ArrayList<Double> y = getFuns(x);
@@ -22,7 +26,7 @@ public class FunctionTable {
 
 	}
 
-	static ArrayList<Double> getArgs(int a, int b, double h) {
+	private static ArrayList<Double> getArgs(int a, int b, double h) {
 		
 		ArrayList<Double> args = new ArrayList<>();
 		
@@ -33,7 +37,7 @@ public class FunctionTable {
 		return args;
 	}
 
-	static ArrayList<Double> getFuns(ArrayList<Double> args) {
+	private static ArrayList<Double> getFuns(ArrayList<Double> args) {
 		
 		ArrayList<Double> funs = new ArrayList<>();
 		
@@ -45,7 +49,7 @@ public class FunctionTable {
 		return funs;
 	}
 
-	static void outputTable(ArrayList<Double> x, ArrayList<Double> y) {
+	private static void outputTable(ArrayList<Double> x, ArrayList<Double> y) {
 		System.out.println("------------------------------\nx \t|\ty\t     |\n------------------------------");
 		for (int i = 0; i < x.size(); i++) {
 			System.out.println(x.get(i) + " \t| " + y.get(i) + " |\n");

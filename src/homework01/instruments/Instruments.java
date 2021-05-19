@@ -4,21 +4,58 @@ import java.util.Scanner;
 
 public class Instruments {
 
-	public static double input(String enter) {
+	public static double inputDouble(String text) {
+
 		Scanner sc = new Scanner(System.in);
-		System.out.println(enter);
-		return sc.nextDouble();
+		double x;
+
+		System.out.println(text);
+		if (sc.hasNextDouble()) {
+			x = sc.nextDouble();
+		} else {
+			throw new ArithmeticException("ÍÅÂÅĞÍÛÉ ÂÂÎÄ");
+		}
+
+		return x;
+
+	}
+
+	public static int inputInt(String text) {
+
+		int x;
+		Scanner sc = new Scanner(System.in);
+
+		System.out.println(text);
+		if (sc.hasNextInt()) {
+			x = sc.nextInt();
+		} else {
+			throw new ArithmeticException("ÍÅÂÅĞÍÛÉ ÂÂÎÄ");
+		}
+
+		return x;
+
 	}
 
 	public static int[] inputArray(String text) {
 		int[] numbers = new int[4];
-
 		Scanner sc = new Scanner(System.in);
+
 		System.out.println(text);
 
 		for (int i = 0; i < numbers.length; i++) {
-			numbers[i] = sc.nextInt();
+			if (sc.hasNextDouble()) {
+				numbers[i] = sc.nextInt();
+			} else {
+				throw new ArithmeticException("ÍÅÂÅĞÍÛÉ ÂÂÎÄ");
+			}
 		}
 		return numbers;
 	}
+
+	public static void checkNegative(double x) throws ArithmeticException {
+		if (x < 0) {
+			throw new ArithmeticException("Íå ìîæåò áûòü îòğèöàòåëüíûì");
+		}
+	}
+
 }

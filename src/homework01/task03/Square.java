@@ -5,20 +5,30 @@ import homework01.instruments.*;
 public class Square {
 
 	public static void main(String[] args) {
-		double area1 = Instruments.input("¬ведите площадь описанного квадрата: ");
-		double radius = getRadius(area1);
-		double area2 = getSquareArea(radius);
+		
+		double area1;
+		double radius;
+		double area2;
+		
+		while(true) {
+		area1 = Instruments.inputDouble("¬ведите площадь описанного квадрата: ");
+		Instruments.checkNegative(area1);
+		
+		radius = getRadius(area1);
+		area2 = getSquareArea(radius);
 		System.out.println("ѕлощадь вписанного квадрата: " + area2);
+		}
 
 	}
 
-	static double getSquareArea(double radius) {
+	private static double getSquareArea(double radius) {
 		double a = radius * Math.sqrt(2);
 		return a * a;
 	}
 
-	static double getRadius(double area) {
+	private static double getRadius(double area) {
 		double a = Math.sqrt(area);
 		return a / 2;
 	}
+	
 }

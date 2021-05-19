@@ -12,7 +12,7 @@ public class OddEvenNumbers {
 		}
 	}
 
-	static boolean isTrue(int[] numbers) {
+	private static boolean isTrue(int[] numbers) {
 		int count = 0;
 
 		for (int i = 0; i < numbers.length; i++) {

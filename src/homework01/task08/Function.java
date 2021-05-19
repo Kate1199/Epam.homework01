@@ -5,8 +5,10 @@ import homework01.instruments.*;
 public class Function {
 
 	public static void main(String[] args) {
+		
+		double x;
 		while (true) {
-			double x = Instruments.input("¬ведите х: ");
+			x = Instruments.inputDouble("¬ведите х: ");
 			System.out.println("F(x) = " + countF(x));
 		}
 

@@ -5,18 +5,21 @@ import homework01.instruments.*;
 public class Circle {
 
 	public static void main(String[] args) {
+		
+		double r;
 		while (true) {
-			double r = Instruments.input("¬ведите радиус R: ");
+			r = Instruments.inputDouble("¬ведите радиус R: ");
+			Instruments.checkNegative(r);
 			System.out.println("ƒлина окружности: " + getCircleLength(r) + "\nѕлощадь окружности: " + getCircleArea(r));
 		}
 
 	}
 
-	static double getCircleLength(double r) {
+	private static double getCircleLength(double r) {
 		return 2 * Math.PI * r;
 	}
 
-	static double getCircleArea(double r) {
+	private static double getCircleArea(double r) {
 		return Math.PI * (r * r);
 	}
 
