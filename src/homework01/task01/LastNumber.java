@@ -8,12 +8,12 @@ public class LastNumber {
 
 		double x;
 		while (true) {
-			x = Instruments.inputDouble("Введите число: ");
-			System.out.println("Последняя цифра квадрата: " + getlastNumberSquare(x));
+			x = Instruments.inputDouble("пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ: ");
+			System.out.println("пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ: " + getlastNumberSquare(x));
 		}
 	}
 
-	private static boolean isDouble(double x) {
+	static boolean isDouble(double x) { 
 		return x % 1 != 0;
 	}
 
