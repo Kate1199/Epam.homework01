@@ -13,7 +13,7 @@ public class Instruments {
 		if (sc.hasNextDouble()) {
 			x = sc.nextDouble();
 		} else {
-			throw new ArithmeticException("ÍÅÂÅĞÍÛÉ ÂÂÎÄ");
+			throw new ArithmeticException("ĞĞ•Ğ’Ğ•Ğ ĞĞ«Ğ™ Ğ’Ğ’ĞĞ”");
 		}
 
 		return x;
@@ -29,7 +29,7 @@ public class Instruments {
 		if (sc.hasNextInt()) {
 			x = sc.nextInt();
 		} else {
-			throw new ArithmeticException("ÍÅÂÅĞÍÛÉ ÂÂÎÄ");
+			throw new ArithmeticException("ĞĞ•Ğ’Ğ•Ğ ĞĞ«Ğ™ Ğ’Ğ’ĞĞ”");
 		}
 
 		return x;
@@ -46,7 +46,7 @@ public class Instruments {
 			if (sc.hasNextDouble()) {
 				numbers[i] = sc.nextInt();
 			} else {
-				throw new ArithmeticException("ÍÅÂÅĞÍÛÉ ÂÂÎÄ");
+				throw new ArithmeticException("ĞĞ•Ğ’Ğ•Ğ ĞĞ«Ğ™ Ğ’Ğ’ĞĞ”");
 			}
 		}
 		return numbers;
@@ -54,7 +54,7 @@ public class Instruments {
 
 	public static void checkNegative(double x) throws ArithmeticException {
 		if (x < 0) {
-			throw new ArithmeticException("Íå ìîæåò áûòü îòğèöàòåëüíûì");
+			throw new ArithmeticException("Ğ§Ğ¸ÑĞ»Ğ¾ Ğ½Ğµ Ğ¼Ğ¾Ğ¶ĞµÑ‚ Ğ±Ñ‹Ñ‚ÑŒ Ğ¼ĞµĞ½ÑŒÑˆĞµ 0");
 		}
 	}
 

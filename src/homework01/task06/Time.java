@@ -8,7 +8,7 @@ public class Time {
 		
 		int sec;
 		while (true) {
-			sec = Instruments.inputInt("Ââåäèòå êîëè÷åñòâî ñåêóíä: ");
+			sec = Instruments.inputInt("Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ ÐºÐ¾Ð»Ð¸Ñ‡ÐµÑÑ‚Ð²Ð¾ ÑÐµÐºÑƒÐ½Ð´: ");
 			Instruments.checkNegative(sec);
 			System.out.println(countTime(sec));
 		}
@@ -36,11 +36,11 @@ public class Time {
 		String hStr;
 
 		if (h == 1 || (h > 20 && h % 10 == 1)) {
-			hStr = " ÷àñ ";
+			hStr = " Ñ‡Ð°Ñ ";
 		} else if ((h > 1 && h < 5) || (h > 20 && (h % 10 > 1 && h % 10 < 5))) {
-			hStr = " ÷àñà ";
+			hStr = " Ñ‡Ð°ÑÐ° ";
 		} else {
-			hStr = " ÷àñîâ ";
+			hStr = " Ñ‡Ð°ÑÐ¾Ð² ";
 		}
 
 		return hStr;
@@ -50,11 +50,11 @@ public class Time {
 		String mStr;
 
 		if (m == 1 || (m > 20 && m % 10 == 1)) {
-			mStr = " ìèíóòà ";
+			mStr = " Ð¼Ð¸Ð½ÑƒÑ‚Ð° ";
 		} else if ((m > 1 && m < 5) || (m > 20 && (m % 10 > 1 && m % 10 < 5))) {
-			mStr = " ìèíóòû ";
+			mStr = " Ð¼Ð¸Ð½ÑƒÑ‚Ñ‹ ";
 		} else {
-			mStr = " ìèíóò ";
+			mStr = " Ð¼Ð¸Ð½ÑƒÑ‚ ";
 		}
 
 		return mStr;
@@ -64,11 +64,11 @@ public class Time {
 		String sStr;
 
 		if (s == 1 || (s > 20 && s % 10 == 1)) {
-			sStr = " ñåêóíäà ";
+			sStr = " ÑÐµÐºÑƒÐ½Ð´Ð° ";
 		} else if ((s > 1 && s < 5) || (s > 20 && (s % 10 > 1 && s % 10 < 5))) {
-			sStr = " ñåêóíäû ";
+			sStr = " ÑÐµÐºÑƒÐ½Ð´Ñ‹ ";
 		} else {
-			sStr = " ñåêóíä ";
+			sStr = " ÑÐµÐºÑƒÐ½Ð´ ";
 		}
 
 		return sStr;

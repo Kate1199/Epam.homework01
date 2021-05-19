@@ -9,9 +9,9 @@ public class PerfectNumber {
 		int num;
 		int[] div;
 		while (true) {
-			num = Instruments.inputInt("Введите число: ");
+			num = Instruments.inputInt("Р’РІРµРґРёС‚Рµ С‡РёСЃР»Рѕ: ");
 			div = findDivisors(num);
-			System.out.println("Число " + num + " совершенное: " + isPerfect(num, div));
+			System.out.println("Р§РёСЃР»Рѕ " + num + " СЃРѕРІРµСЂС€РµРЅРЅРѕРµ: " + isPerfect(num, div));
 		}
 
 	}

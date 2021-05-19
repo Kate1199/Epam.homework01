@@ -13,9 +13,9 @@ public class FunctionTable {
 		
 		while (true) {
 
-			a = (int) Instruments.inputDouble("Ââåäèòå à: ");
-			b = (int) Instruments.inputDouble("Ââåäèòå b: ");
-			h = Instruments.inputDouble("Ââåäèòå h: ");
+			a = (int) Instruments.inputDouble("Ğ’Ğ²ĞµĞ´Ğ¸Ñ‚Ğµ Ğ°: ");
+			b = (int) Instruments.inputDouble("Ğ’Ğ²ĞµĞ´Ğ¸Ñ‚Ğµ b: ");
+			h = Instruments.inputDouble("Ğ’Ğ²ĞµĞ´Ğ¸Ñ‚Ğµ h: ");
 
 			ArrayList<Double> x = getArgs(a, b, h);
 			ArrayList<Double> y = getFuns(x);

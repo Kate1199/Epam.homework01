@@ -8,12 +8,12 @@ public class NumberOfDays {
 		int month, year, days;
 
 		while (true) {
-			month = Instruments.inputInt("Введите месяц: ");
+			month = Instruments.inputInt("Р’РІРµРґРёС‚Рµ РјРµСЃСЏС†: ");
 			checkMonth(month);
-			year = Instruments.inputInt("Введите год: ");
+			year = Instruments.inputInt("Р’РІРµРґРёС‚Рµ РіРѕРґ: ");
 			Instruments.checkNegative(year);
 			days = countDays(month, year);
-			System.out.println("Количество дней в " + month + " месяце " + year + " года: " + days);
+			System.out.println("РљРѕР»РёС‡РµСЃС‚РІРѕ РґРЅРµР№ РІ " + month + " РјРµСЃСЏС†Рµ " + year + " РіРѕРґР°: " + days);
 		}
 	}
 
@@ -49,7 +49,7 @@ public class NumberOfDays {
 
 	private static void checkMonth(int m) throws ArithmeticException {
 		if (m <= 0 || m > 12) {
-			throw new ArithmeticException("Месяц введён неверно");
+			throw new ArithmeticException("РњРµСЃСЏС† РІРІРµРґС‘РЅ РЅРµРІРµСЂРЅРѕ");
 		}
 	}
 

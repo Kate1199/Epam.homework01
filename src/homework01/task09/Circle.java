@@ -8,9 +8,9 @@ public class Circle {
 		
 		double r;
 		while (true) {
-			r = Instruments.inputDouble("Введите радиус R: ");
+			r = Instruments.inputDouble("Р’РІРµРґРёС‚Рµ R: ");
 			Instruments.checkNegative(r);
-			System.out.println("Длина окружности: " + getCircleLength(r) + "\nПлощадь окружности: " + getCircleArea(r));
+			System.out.println("Р”Р»РёРЅР° РѕРєСЂСѓР¶РЅРѕСЃС‚Рё: " + getCircleLength(r) + "\nРџР»РѕС‰Р°РґСЊ РєСЂСѓРіР°: " + getCircleArea(r));
 		}
 
 	}

@@ -6,9 +6,9 @@ public class OddEvenNumbers {
 
 	public static void main(String[] args) {
 		while (true) {
-			int[] numbers = Instruments.inputArray("Введите A, B, C, D");
+			int[] numbers = Instruments.inputArray("Р’РІРµРґРёС‚Рµ A, B, C, D");
 			boolean result = isTrue(numbers);
-			System.out.println("Как минимум 2 числа чётные: " + result);
+			System.out.println("РљР°Рє РјРёРЅРёРјСѓРј 2 С‡РёСЃР»Р° С‡С‘С‚РЅС‹Рµ: " + result);
 		}
 	}
 

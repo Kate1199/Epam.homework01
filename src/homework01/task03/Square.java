@@ -11,12 +11,12 @@ public class Square {
 		double area2;
 		
 		while(true) {
-		area1 = Instruments.inputDouble("Введите площадь описанного квадрата: ");
+		area1 = Instruments.inputDouble("Р’РІРµРґРёС‚Рµ РїР»РѕС‰Р°РґСЊ РєРІР°РґСЂР°С‚Р°, РІ РєРѕС‚РѕСЂС‹Р№ РІРїРёСЃР°РЅР° РѕРєСЂСѓР¶РЅРѕСЃС‚СЊ: ");
 		Instruments.checkNegative(area1);
 		
 		radius = getRadius(area1);
 		area2 = getSquareArea(radius);
-		System.out.println("Площадь вписанного квадрата: " + area2);
+		System.out.println("РџР»РѕС‰Р°РґСЊ РІРїРёСЃР°РЅРЅРѕРіРѕ РєРІР°РґСЂР°С‚Р°: " + area2);
 		}
 
 	}

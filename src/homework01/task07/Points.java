@@ -9,10 +9,10 @@ public class Points {
 		double[] coor = new double[4];
 
 		while (true) {
-			coor[0] = Instruments.inputDouble("Введите х1: ");
-			coor[1] = Instruments.inputDouble("Введите y1: ");
-			coor[2] = Instruments.inputDouble("Введите х2: ");
-			coor[3] = Instruments.inputDouble("Введите y2: ");
+			coor[0] = Instruments.inputDouble("Р’РІРµРґРёС‚Рµ С…1: ");
+			coor[1] = Instruments.inputDouble("Р’РІРµРґРёС‚Рµ y1: ");
+			coor[2] = Instruments.inputDouble("Р’РІРµРґРёС‚Рµ С…2: ");
+			coor[3] = Instruments.inputDouble("Р’РІРµРґРёС‚Рµ y2: ");
 			
 			for(double c : coor) {
 				Instruments.checkNegative(c);
@@ -32,11 +32,11 @@ public class Points {
 
 	static String comparePoints(double A, double B) {
 		if (A < B) {
-			return "Точка А ближе к началу координат";
+			return "РўРѕС‡РєР° Рђ Р±Р»РёР¶Рµ Рє РЅР°С‡Р°Р»Сѓ РєРѕРѕСЂРґРёРЅР°С‚";
 		} else if (A == B) {
-			return "Точки А и В одинаково удалены от начала координат";
+			return "РўРѕС‡РєРё СЂР°РІРЅРѕСѓРґР°Р»РµРЅС‹ РѕС‚ РЅР°С‡Р°Р»Р° РєРѕРѕСЂРґРёРЅР°С‚";
 		} else {
-			return "Точка B ближе к началу координат";
+			return "РўРѕС‡РєР° B Р±Р»РёР¶Рµ Рє РЅР°С‡Р°Р»Сѓ РєРѕРѕСЂРґРёРЅР°С‚";
 		}
 	}
 

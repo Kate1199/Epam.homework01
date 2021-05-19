@@ -8,7 +8,7 @@ public class Function {
 		
 		double x;
 		while (true) {
-			x = Instruments.inputDouble("Введите х: ");
+			x = Instruments.inputDouble("Р’РІРµРґРёС‚Рµ С…: ");
 			System.out.println("F(x) = " + countF(x));
 		}
 
