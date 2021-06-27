@@ -20,7 +20,7 @@ public class View {
 		System.out.println(strHours + strMin + strSec);
 	}
 	
-	public static String outputHours(int h) {
+	private static String outputHours(int h) {
 		String hStr;
 
 		if (isOne(h)) {
@@ -34,7 +34,7 @@ public class View {
 		return hStr;
 	}
 
-	public static String outputMinuts(int m) {
+	private static String outputMinuts(int m) {
 		String mStr;
 
 		if (isOne(m)) {
@@ -48,7 +48,7 @@ public class View {
 		return mStr;
 	}
 
-	public static String outputSeconds(int s) {
+	private static String outputSeconds(int s) {
 		String sStr;
 
 		if (isOne(s)) {
