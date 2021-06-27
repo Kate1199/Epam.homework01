@@ -10,30 +10,13 @@ public class Point {
 		this.x = x;
 		this.y = y;
 		
-		distance = Math.sqrt(x * x + y * y);
+		distance = countDistance();
 	}
 	
-	 
-	
-	public Point findTheNearest(Point p) {
-		
-		if (this.distance < p.distance) {
-			return this;
-		} else if (this.distance == p.distance){
-			return null;
-		} else {
-			return p;
-		}
+	private double countDistance() {
+		return Math.sqrt(x * x + y * y);
 	}
 	
-	public static void outputTheNearest(Point p) {
-		if(p != null ) {
-			System.out.println("Точка с координатами " + p.toString() + " ближе к началу координат");
-		} else  {
-			System.out.println("Точки равноудалены от начала координат");
-		}
-	}
-
 	public double getX() {
 		return x;
 	}
@@ -54,15 +37,25 @@ public class Point {
 		this.y = y;
 	}
 	
+	@Override
 	public String toString() {
 		return "{x = " + x + " y = " + y + "}";
 	}
 	
+	@Override
 	public int hashCode() {
-		return (int) (x * 5 - y * 12);
+		return (int) (x * 31 - y * 31);
 	}
 	
-	public boolean equals(Point p) {
-		return this.hashCode() == p.hashCode();
+	@Override
+	public boolean equals(Object o) {
+		if(o == null) return false;
+		if(this == o) return true;
+		if(this.getClass() != o.getClass()) return false;
+		
+		Point point = (Point) o;
+		return x == point.getX()
+				&& y == point.getY()
+				&& distance == point.getDistance();
 	}
 }

@@ -2,18 +2,24 @@ package by.epam.kisel.task01.logic;
 
 public class LastNumber {
 	
-	static boolean isDouble(double x) { 
+	private static boolean isDouble(double x) { 
 		return x % 1 != 0;
 	}
 
-	public static double takelastNumberSquare(double x) {
+	public static double countLastNumberSquare(double x) {
 		double square;
-		
+		double lastDigit;
+		x = makeInt(x);
+		lastDigit = x % 10;
+		square = Math.pow(lastDigit, 2) % 10;
+		return square;
+	}
+	
+	private static double makeInt(double x) {
 		while (isDouble(x)) {
 			x = x * 10;
 		}
-		square = Math.pow(x % 10, 2) % 10;
-		return square;
+		return x;
 	}
 
 }

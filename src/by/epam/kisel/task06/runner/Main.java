@@ -2,6 +2,7 @@ package by.epam.kisel.task06.runner;
 
 import by.epam.kisel.inputUtility.InputUtility;
 import by.epam.kisel.task06.logic.Time;
+import by.epam.kisel.task06.view.View;
 
 public class Main {
 
@@ -10,8 +11,7 @@ public class Main {
 		int sec;
 		while (true) {
 			sec = InputUtility.inputInt("Введите количество секунд: ");
-			
-			System.out.println(Time.countTime(sec));
+			View.printTime(sec);
 		}
 
 

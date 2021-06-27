@@ -4,7 +4,7 @@ public class OddEvenNumbers {
 
 	private static final int MIN_NUMBER_OF_EVEN = 2;
 
-	public static boolean isEven(int x) {
+	private static boolean isEven(int x) {
 		return x % 2 == 0;
 	}
 

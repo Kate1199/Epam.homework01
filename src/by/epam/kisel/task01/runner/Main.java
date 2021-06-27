@@ -9,7 +9,7 @@ public class Main {
 		double x;
 		while (true) {
 			x = InputUtility.inputDouble("Введите число: ");
-			System.out.println("Последняя цифра квадрата числа: " + LastNumber.takelastNumberSquare(x));
+			System.out.println("Последняя цифра квадрата числа: " + LastNumber.countLastNumberSquare(x));
 		}
 	}
 

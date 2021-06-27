@@ -54,5 +54,4 @@ public class InputUtility {
 			throw new InputMismatchException("Значение должно быть больше 0");
 		}
 	}
-
 }

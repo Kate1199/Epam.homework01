@@ -2,6 +2,8 @@ package by.epam.kisel.task07.runner;
 
 import by.epam.kisel.inputUtility.InputUtility;
 import by.epam.kisel.task07.entity.Point;
+import by.epam.kisel.task07.logic.PointLogic;
+import by.epam.kisel.task07.view.PointView;
 
 public class Main {
 
@@ -17,8 +19,8 @@ public class Main {
 			Point a = new Point(x1, y1);
 			Point b = new Point(x2, y2);
 			
-			Point nearest = a.findTheNearest(b);
-			Point.outputTheNearest(nearest);
+			Point nearest = PointLogic.findTheNearest(a, b);
+			PointView.outputTheNearest(nearest);
 
 		}
 
