@@ -6,12 +6,12 @@ public class Function {
 	
 	private static final double CONDITION = 3;
 	
-	public static double findY1(double x) {
+	private static double findY1(double x) {
 		double y = -(x * x) + 3 * x + 9;
 		return y;
 	}
 	
-	public static double findY2(double x) throws InputMismatchException {
+	private static double findY2(double x) throws InputMismatchException {
 		double divider = Math.pow(x, 3) - 6;
 		
 		if(divider == 0) {
