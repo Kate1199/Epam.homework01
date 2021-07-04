@@ -1,10 +1,6 @@
 package by.epam.kisel.task01.logic;
 
 public class LastNumber {
-	
-	private static boolean isDouble(double x) { 
-		return x % 1 != 0;
-	}
 
 	public static double countLastNumberSquare(double x) {
 		double square;
@@ -20,6 +16,10 @@ public class LastNumber {
 			x = x * 10;
 		}
 		return x;
+	}
+	
+	private static boolean isDouble(double x) { 
+		return x % 1 != 0;
 	}
 
 }

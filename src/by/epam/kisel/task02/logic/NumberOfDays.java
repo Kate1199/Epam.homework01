@@ -8,14 +8,6 @@ public class NumberOfDays {
 	private static final int LEAP_YEAR_DIV_100 = 100;
 	private static final int LEAP_YEAR_DIV_400 = 400;
 
-	private static boolean isLeap(int year) {
-		boolean div4 = year % LEAP_YEAR_DIV_4 == 0;
-		boolean div100 = year % LEAP_YEAR_DIV_100 != 0;
-		boolean div400 = year % LEAP_YEAR_DIV_400 == 0;
-
-		return div4 && (div100 || div400);
-	}
-
 	public static int countDays(int month, int year) throws InputMismatchException {
 		int currentMonthDays = 0;
 
@@ -38,6 +30,14 @@ public class NumberOfDays {
 			currentMonthDays = 29;
 		}
 		return currentMonthDays;
+	}
+	
+	private static boolean isLeap(int year) {
+		boolean div4 = year % LEAP_YEAR_DIV_4 == 0;
+		boolean div100 = year % LEAP_YEAR_DIV_100 != 0;
+		boolean div400 = year % LEAP_YEAR_DIV_400 == 0;
+
+		return div4 && (div100 || div400);
 	}
 
 }

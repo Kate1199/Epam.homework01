@@ -19,8 +19,8 @@ public class Main {
 			b = InputUtility.inputInt("Введите b: ");
 			h = InputUtility.inputDouble("Введите h: ");
 
-			ArrayList<Double> x = FunctionTable.findArgs(a, b, h);
-			ArrayList<Double> y = FunctionTable.findFuncs(x);
+			ArrayList<Double> x = FunctionTable.findArguments(a, b, h);
+			ArrayList<Double> y = FunctionTable.findFunctions(x);
 
 			TableView.outputTable(x, y);
 		}

@@ -6,6 +6,13 @@ public class Function {
 	
 	private static final double CONDITION = 3;
 	
+	public static double countF(double x) {
+		double y1 = findY1(x);
+		double y2 = findY2(x);
+		double func = ((x >= CONDITION) ? y1 : y2);
+		return func;
+	}
+	
 	private static double findY1(double x) {
 		double y = -(x * x) + 3 * x + 9;
 		return y;
@@ -19,13 +26,6 @@ public class Function {
 		}
 		double y = 1 / divider;
 		return y;
-	}
-	
-	public static double countF(double x) {
-		double y1 = findY1(x);
-		double y2 = findY2(x);
-		double func = ((x >= CONDITION) ? y1 : y2);
-		return func;
 	}
 
 }

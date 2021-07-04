@@ -54,4 +54,8 @@ public class InputUtility {
 			throw new InputMismatchException("Значение должно быть больше 0");
 		}
 	}
+	
+	public static boolean isNull(Object o) {
+		return o == null;
+	}
 }

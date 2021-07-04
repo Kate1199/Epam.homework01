@@ -2,7 +2,7 @@ package by.epam.kisel.task06.view;
 
 import by.epam.kisel.task06.logic.Time;
 
-public class View {
+public class TimeView {
 	
 	public static void printTime(int sec) {
 		int hours = Time.countHours(sec);

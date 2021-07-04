@@ -7,11 +7,9 @@ import by.epam.kisel.inputUtility.InputUtility;
 
 public class FunctionTable {
 
-	public static ArrayList<Double> findArgs(int a, int b, double h) throws InputMismatchException {
+	public static ArrayList<Double> findArguments(int a, int b, double h) throws InputMismatchException {
 
-		if (a >= b) {
-			throw new InputMismatchException("а должно быть больше b");
-		}
+		checkRange(a, b);
 		InputUtility.checkNegative(h);
 
 		ArrayList<Double> args = new ArrayList<>();
@@ -22,9 +20,15 @@ public class FunctionTable {
 
 		return args;
 	}
+	
+	private static void checkRange(int a, int b) throws InputMismatchException {
+		if (a >= b) {
+			throw new InputMismatchException("а должно быть больше b");
+		}
+	}
 
-	public static ArrayList<Double> findFuncs(ArrayList<Double> args) {
-
+	public static ArrayList<Double> findFunctions(ArrayList<Double> args) {
+		emptyArguments(args);
 		ArrayList<Double> funcs = new ArrayList<>();
 
 		for (double x : args) {
@@ -33,5 +37,12 @@ public class FunctionTable {
 		}
 
 		return funcs;
+	}
+	
+	private static void emptyArguments(ArrayList<Double> args) throws InputMismatchException {
+		if(InputUtility.isNull(args)) {
+			throw new InputMismatchException("Знаечние аргументов - null");
+		}
+
 	}
 }
